@@ -1,0 +1,131 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: url(../img/bg.png);
+  overflow-x: hidden;
+}
+
+a {
+  color: white;
+}
+
+.container .top-bar {
+  width: 100vw;
+  background-color: #86001e;
+  -webkit-filter: brightness(85%);
+          filter: brightness(85%);
+  z-index: 1;
+  padding: 0.7rem;
+  border-bottom: 1px solid #c60035;
+}
+
+.container header {
+  width: 100vw;
+  padding: 1rem;
+}
+
+.container header .split {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0.8rem;
+  margin: 0 auto;
+  width: 70vh;
+}
+
+.container header .split .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container header .split .uni-name {
+  width: 85%;
+  text-align: center;
+}
+
+.container header .split .uni-name h1 {
+  padding: 0.5em 1em;
+  color: white;
+  font-size: 1.3em;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+}
+
+main #hamburgerMenu {
+  position: relative;
+  top: -20em;
+  margin: 1rem 2rem;
+  cursor: pointer;
+}
+
+main #hamburgerMenu .svg {
+  fill: white;
+}
+
+main nav {
+  display: none;
+}
+
+@media only screen and (min-width: 800px) {
+  .container header .split {
+    background-image: url(../img/header-shadow.png);
+    z-index: 3;
+    margin-top: -10px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 70%;
+  }
+  .container header .split .logo {
+    margin-top: -10px;
+  }
+  .container header .split .logo img {
+    width: 160px;
+    height: 160px;
+  }
+  .container header .split .uni-name {
+    width: 70%;
+    margin-left: -1.7rem;
+    margin-top: -1.3rem;
+  }
+  .container header .split .uni-name h1 {
+    padding-left: 0px;
+    font-size: 2em;
+    font-weight: 700;
+  }
+  .container main #hamburger {
+    display: none;
+  }
+  .container main nav {
+    display: initial;
+  }
+  .container main nav #Menu-items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+/*# sourceMappingURL=main.css.map */

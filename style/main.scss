@@ -54,13 +54,19 @@ main {
         position: relative;
         top: -20em;
         margin: 1rem 2rem;
+        padding: 0px 0.2rem;
         cursor: pointer;
         .svg {
             fill: white;
         }
+        // &:hover {
+        //     background-color: blue;
+        // }
     }
     nav {
-        display: none;
+        ul {
+            display: none;
+        }
     }
 }
 @media only screen and (min-width: 800px) {
@@ -97,11 +103,21 @@ main {
             display: none;
         }
         nav {
-            display: initial;
-            #Menu-items {
-                display: flex;
+            padding: 1rem;
+            position: relative;
+            top: -6rem;
+            width: 68.5vw;
+            margin: 0 auto;
+            background-color: chartreuse;
+
+            ul {
+                // display: initial;
+                // li {
+                //     // width: 120px;
+                //     width: 100%;
+                //     background-color: cyan;
+                //     float: left;
             }
-            // padding-left: 4rem;
         }
     }
 }

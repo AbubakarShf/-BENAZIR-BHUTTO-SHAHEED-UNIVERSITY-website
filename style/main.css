@@ -74,6 +74,7 @@ main #hamburgerMenu {
   position: relative;
   top: -20em;
   margin: 1rem 2rem;
+  padding: 0px 0.2rem;
   cursor: pointer;
 }
 
@@ -81,7 +82,7 @@ main #hamburgerMenu .svg {
   fill: white;
 }
 
-main nav {
+main nav ul {
   display: none;
 }
 
@@ -120,12 +121,12 @@ main nav {
     display: none;
   }
   .container main nav {
-    display: initial;
-  }
-  .container main nav #Menu-items {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    padding: 1rem;
+    position: relative;
+    top: -6rem;
+    width: 68.5vw;
+    margin: 0 auto;
+    background-color: chartreuse;
   }
 }
 /*# sourceMappingURL=main.css.map */

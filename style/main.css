@@ -121,12 +121,110 @@ main nav ul {
     display: none;
   }
   .container main nav {
-    padding: 1rem;
+    width: 90vh;
+  }
+  .container main nav #menu {
     position: relative;
-    top: -6rem;
-    width: 68.5vw;
-    margin: 0 auto;
-    background-color: chartreuse;
+    top: -7rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100vw;
+    padding: 1rem;
+  }
+  .container main nav #menu ul {
+    display: initial;
+    border-radius: 10px;
+    list-style: none;
+    position: relative;
+    padding: 1rem;
+    float: left;
+  }
+  .container main nav #menu ul a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+  }
+  .container main nav #menu ul a {
+    padding: 0px 10px;
+    display: block;
+  }
+  .container main nav #menu ul li {
+    float: left;
+    position: relative;
+    margin: 0;
+    padding: 0;
+  }
+  .container main nav #menu ul li:hover > ul {
+    display: block;
+  }
+  .container main nav #menu ul .li-main:hover {
+    border-bottom: 1px solid white;
+  }
+  .container main nav #menu ul ul li:hover {
+    background-color: #d4033b;
+  }
+  .container main nav #menu ul ul > li {
+    margin: 5px 0px;
+  }
+  .container main nav #menu ul ul {
+    border-radius: 7px;
+    display: none;
+    position: absolute;
+    background-color: #b10d0d;
+    top: 100%;
+    left: 0;
+  }
+  .container main nav #menu ul ul li {
+    float: none;
+    width: 200px;
+  }
+  .container main nav #menu ul ul li:hover {
+    border-radius: 4px;
+    border: 1px solid white;
+  }
+  .container main nav #menu ul ul ul {
+    top: 0;
+    left: 100%;
+  }
+  .container main nav #menu > ul {
+    background-color: #970008;
+    z-index: 100;
+  }
+}
+
+@media only screen and (max-width: 1527px) and (min-width: 970px) {
+  .container header .split .uni-name h1 {
+    margin-left: 2rem;
+    font-size: 1.6rem;
+  }
+  .container main nav {
+    margin-left: 3rem;
+  }
+  .container main nav #menu ul .li-main a {
+    padding: 0px 5px;
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 973px) and (min-width: 800px) {
+  .container header .split .uni-name h1 {
+    margin-left: 1rem;
+    font-size: 1.2rem;
+  }
+  .container main nav {
+    margin-left: 2rem;
+  }
+  .container main nav #menu ul li a {
+    padding: 0px 4px;
+    font-size: 13px;
   }
 }
 /*# sourceMappingURL=main.css.map */

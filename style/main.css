@@ -14,8 +14,6 @@ a {
   text-decoration: none;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: white;
-  font-weight: 600;
-  font-size: 1rem;
 }
 
 .container .top-bar {
@@ -77,7 +75,7 @@ a {
 main #hamburgerMenu {
   position: relative;
   top: -20em;
-  margin: 1rem 2rem;
+  margin: 0.4rem 1.1rem;
   padding: 0px 0.2rem;
   cursor: pointer;
 }
@@ -86,15 +84,79 @@ main #hamburgerMenu .svg {
   fill: white;
 }
 
+main #nav-bar {
+  margin-top: -20.6rem;
+  margin-left: 2rem;
+  position: absolute;
+  display: none;
+}
+
 main #nav-bar ul {
-  background-color: crimson;
+  padding: 0.8rem 0px;
+  background-color: #970008;
   border: 1px solid black;
   border-radius: 10px;
   list-style: none;
   display: inline-block;
 }
 
+main #nav-bar ul li:hover {
+  background-color: #c5141d;
+  border-radius: 2px;
+}
+
+main #nav-bar ul > li {
+  padding: 1px 10px;
+  margin-bottom: 3px;
+}
+
+main #nav-bar ul li a {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+main #nav-bar ul li:hover ul {
+  -webkit-animation: FadeIn 0.4s;
+          animation: FadeIn 0.4s;
+}
+
 main #nav-bar #Deep0-ul .Deep1-ul {
+  display: none;
+}
+
+main #nav-bar #Deep0-ul ul {
+  min-width: 9rem;
+}
+
+main #nav-bar #Deep0-ul .Deep0-li:hover:nth-child(2) .Deep1-ul {
+  margin-left: 4.6rem;
+}
+
+main #nav-bar #Deep0-ul .Deep0-li:hover:nth-child(3) .Deep1-ul {
+  margin-left: 3.9rem;
+}
+
+main #nav-bar #Deep0-ul .Deep0-li:hover:nth-child(4) .Deep1-ul {
+  margin-left: 3rem;
+}
+
+main #nav-bar #Deep0-ul .Deep0-li:hover:nth-child(5) .Deep1-ul {
+  margin-left: 2rem;
+}
+
+main #nav-bar #Deep0-ul .Deep0-li:hover .Deep1-ul {
+  display: initial;
+  position: absolute;
+}
+
+main #nav-bar #Deep0-ul .Deep0-li:hover .Deep1-ul .Deep1-li:hover .Deep2-ul {
+  position: absolute;
+  display: inline-block;
+  margin-top: 0.3rem;
+  width: 25vh;
+}
+
+main #nav-bar #Deep0-ul .Deep0-li:hover .Deep1-ul ul {
   display: none;
 }
 
@@ -132,10 +194,13 @@ main #nav-bar #Deep0-ul .Deep1-ul {
   .container main #hamburger {
     display: none;
   }
-  .container main nav {
+  .container main #nav-bar {
+    margin-top: 10px !important;
+    display: initial !important;
+    position: relative;
     width: 90vh;
   }
-  .container main nav #menu {
+  .container main #nav-bar #menu {
     position: relative;
     top: -7rem;
     display: -webkit-box;
@@ -147,65 +212,83 @@ main #nav-bar #Deep0-ul .Deep1-ul {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     width: 100vw;
-    padding: 1rem;
   }
-  .container main nav #menu #Deep0-ul {
+  .container main #nav-bar #menu #Deep0-ul a {
+    font-weight: 600;
+    font-size: 1rem;
+  }
+  .container main #nav-bar #menu #Deep0-ul .Deep0-li > ul {
+    margin-right: -6rem;
+  }
+  .container main #nav-bar #menu #Deep0-ul .Deep0-li .Deep1-ul {
+    margin: 0px 0px 0px 0px !important;
+    padding: 3px !important;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .container main #nav-bar #menu #Deep0-ul {
     border-radius: 10px;
     list-style: none;
     position: relative;
     padding: 1rem;
     float: left;
   }
-  .container main nav #menu #Deep0-ul .Deep0-li:hover .Deep1-ul {
+  .container main #nav-bar #menu #Deep0-ul .Deep0-li:hover .Deep1-ul {
+    -webkit-animation: FadeIn 0.8s;
+            animation: FadeIn 0.8s;
     display: initial;
   }
-  .container main nav #menu #Deep0-ul .Deep0-li:hover .Deep1-ul .Deep1-li:hover .Deep2-ul {
+  .container main #nav-bar #menu #Deep0-ul .Deep0-li:hover .Deep1-ul .Deep1-li:hover .Deep2-ul {
     display: initial;
   }
-  .container main nav #menu #Deep0-ul .Deep0-li:hover .Deep1-ul .Deep1-li .Deep2-ul {
+  .container main #nav-bar #menu #Deep0-ul .Deep0-li:hover .Deep1-ul .Deep1-li .Deep2-ul {
     display: none;
   }
-  .container main nav #menu #Deep0-ul a {
+  .container main #nav-bar #menu #Deep0-ul a {
     padding: 0px 10px;
     display: block;
   }
-  .container main nav #menu #Deep0-ul li {
+  .container main #nav-bar #menu #Deep0-ul li {
     float: left;
     position: relative;
     margin: 0;
     padding: 0;
   }
-  .container main nav #menu #Deep0-ul #Deep0-li:hover > ul {
+  .container main #nav-bar #menu #Deep0-ul #Deep0-li:hover > ul {
     display: initial;
   }
-  .container main nav #menu #Deep0-ul .Deep0-li:hover {
+  .container main #nav-bar #menu #Deep0-ul .Deep0-li:hover {
     border-bottom: 1px solid white;
   }
-  .container main nav #menu #Deep0-ul ul li:hover {
-    background-color: #d4033b;
+  .container main #nav-bar #menu #Deep0-ul ul li:hover {
+    background-color: #c5141d;
   }
-  .container main nav #menu #Deep0-ul ul > li {
+  .container main #nav-bar #menu #Deep0-ul ul > li {
     margin: 5px 0px;
   }
-  .container main nav #menu #Deep0-ul ul {
+  .container main #nav-bar #menu #Deep0-ul ul {
     border-radius: 7px;
     position: absolute;
     background-color: #970008;
     top: 100%;
     left: 0;
   }
-  .container main nav #menu #Deep0-ul ul li {
+  .container main #nav-bar #menu #Deep0-ul ul li {
     float: none;
     width: 200px;
   }
-  .container main nav #menu #Deep0-ul ul li:hover {
+  .container main #nav-bar #menu #Deep0-ul ul li:hover {
     border-radius: 4px;
   }
-  .container main nav #menu #Deep0-ul ul ul {
+  .container main #nav-bar #menu #Deep0-ul ul ul {
     top: 0;
     left: 100%;
   }
-  .container main nav #menu > ul {
+  .container main #nav-bar #menu > ul {
     background-color: #970008;
     z-index: 100;
   }
@@ -216,10 +299,11 @@ main #nav-bar #Deep0-ul .Deep1-ul {
     margin-left: 2rem;
     font-size: 1.6rem;
   }
-  .container main nav {
+  .container main #nav-bar {
+    display: initial;
     margin-left: 3rem;
   }
-  .container main nav #menu ul .Deep0-li a {
+  .container main #nav-bar #menu ul .Deep0-li a {
     padding: 0px 5px;
     font-size: 15px;
   }
@@ -232,10 +316,42 @@ main #nav-bar #Deep0-ul .Deep1-ul {
   }
   .container main nav {
     margin-left: 2rem;
+    display: initial;
   }
   .container main nav #menu ul li a {
     padding: 0px 4px;
     font-size: 13px;
+  }
+}
+
+@media only screen and (max-width: 947px) and (min-width: 800px) {
+  #nav-bar #menu #Deep0-ul {
+    width: 82vw;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    padding: 0.8rem !important;
+  }
+  #nav-bar #menu #Deep0-ul li a {
+    font-weight: 400;
+    font-size: 10px !important;
+  }
+}
+
+@-webkit-keyframes FadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes FadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 /*# sourceMappingURL=main.css.map */

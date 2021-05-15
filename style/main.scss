@@ -11,8 +11,6 @@ a {
     text-decoration: none;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     color: white;
-    font-weight: 600;
-    font-size: 1rem;
 }
 .container {
     .top-bar {
@@ -57,7 +55,7 @@ main {
     #hamburgerMenu {
         position: relative;
         top: -20em;
-        margin: 1rem 2rem;
+        margin: 0.4rem 1.1rem;
         padding: 0px 0.2rem;
         cursor: pointer;
         .svg {
@@ -65,15 +63,88 @@ main {
         }
     }
     #nav-bar {
+        margin-top: -20.6rem;
+        margin-left: 2rem;
+        position: absolute;
+        display: none;
         ul {
-            background-color: crimson;
+            padding: 0.8rem 0px;
+            background-color: #970008;
             border: 1px solid black;
             border-radius: 10px;
             list-style: none;
             display: inline-block;
+            li {
+                &:hover {
+                    background-color: #c5141d;
+                    border-radius: 2px;
+                }
+            }
+            > li {
+                padding: 1px 10px;
+                margin-bottom: 3px;
+            }
+            li {
+                a {
+                    font-size: 12px;
+                    font-weight: bold;
+                }
+                &:hover {
+                    ul {
+                        animation: FadeIn 0.4s;
+                    }
+                }
+            }
         }
         #Deep0-ul .Deep1-ul {
             display: none;
+        }
+
+        #Deep0-ul {
+            ul {
+                min-width: 9rem;
+            }
+            .Deep0-li {
+                &:hover {
+                    &:nth-child(2) {
+                        .Deep1-ul {
+                            margin-left: 4.6rem;
+                        }
+                    }
+                    &:nth-child(3) {
+                        .Deep1-ul {
+                            margin-left: 3.9rem;
+                        }
+                    }
+                    &:nth-child(4) {
+                        .Deep1-ul {
+                            margin-left: 3rem;
+                        }
+                    }
+                    &:nth-child(5) {
+                        .Deep1-ul {
+                            margin-left: 2rem;
+                        }
+                    }
+                    .Deep1-ul {
+                        display: initial;
+                        position: absolute;
+                        .Deep1-li {
+                            &:hover {
+                                .Deep2-ul {
+                                    position: absolute;
+                                    display: inline-block;
+                                    margin-top: 0.3rem;
+                                    width: 25vh;
+                                }
+                            }
+                        }
+                        ul {
+                            display: none;
+                        }
+                    }
+                }
+            }
         }
     }
 }
@@ -111,7 +182,12 @@ main {
             display: none;
         }
 
-        nav {
+        #nav-bar {
+            margin-top: 10px !important  ;
+            display: initial !important;
+            // position: absolute;
+            position: relative;
+
             width: 90vh;
             #menu {
                 position: relative;
@@ -120,10 +196,28 @@ main {
                 justify-content: center;
                 flex-wrap: wrap;
                 width: 100vw;
-                padding: 1rem;
+                #Deep0-ul {
+                    a {
+                        font-weight: 600;
+                        font-size: 1rem;
+                    }
+                    .Deep0-li {
+                        > ul {
+                            margin-right: -6rem;
+                        }
+                        .Deep1-ul {
+                            margin: 0px 0px 0px 0px !important;
+                            padding: 3px !important;
+                            justify-content: center;
+                            align-items: center;
+                        }
+                    }
+                }
                 #Deep0-ul {
                     .Deep0-li:hover {
                         .Deep1-ul {
+                            animation: FadeIn 0.8s;
+
                             display: initial;
                             .Deep1-li {
                                 &:hover {
@@ -160,7 +254,7 @@ main {
                         border-bottom: 1px solid white;
                     }
                     ul li:hover {
-                        background-color: #d4033b;
+                        background-color: #c5141d;
                     }
                     ul > li {
                         margin: 5px 0px;
@@ -199,8 +293,6 @@ main {
     .container {
         header {
             .split {
-                .logo {
-                }
                 .uni-name {
                     h1 {
                         margin-left: 2rem;
@@ -210,7 +302,8 @@ main {
             }
         }
         main {
-            nav {
+            #nav-bar {
+                display: initial;
                 margin-left: 3rem;
                 #menu {
                     ul {
@@ -230,8 +323,6 @@ main {
     .container {
         header {
             .split {
-                .logo {
-                }
                 .uni-name {
                     h1 {
                         margin-left: 1rem;
@@ -243,6 +334,8 @@ main {
         main {
             nav {
                 margin-left: 2rem;
+                display: initial;
+
                 #menu {
                     ul {
                         li {
@@ -255,5 +348,30 @@ main {
                 }
             }
         }
+    }
+}
+@media only screen and (max-width: 947px) and (min-width: 800px) {
+    #nav-bar {
+        #menu {
+            #Deep0-ul {
+                width: 82vw;
+                flex-wrap: nowrap;
+                padding: 0.8rem !important;
+                li {
+                    a {
+                        font-weight: 400;
+                        font-size: 10px !important;
+                    }
+                }
+            }
+        }
+    }
+}
+@keyframes FadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }

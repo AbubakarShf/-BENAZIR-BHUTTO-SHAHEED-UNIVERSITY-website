@@ -35,12 +35,14 @@
             </div>
         </header>
         <main>
-            <svg id="hamburgerMenu" viewBox="0 0 100 80" width="40" height="40">
-                <rect class="svg" width="80" height="9" rx="8"></rect>
-                <rect class="svg" y="23" width="80" height="9" rx="8"></rect>
-                <rect class="svg" y="45" width="80" height="9" rx="8"></rect>
-            </svg>
-            <nav id="nav-bar" role="navigation">
+            <div id="burgerDiv" onclick="NavFunc()">
+                <svg id="hamburgerMenu" viewBox="0 0 100 80" width="40" height="40">
+                    <rect class="svg" width="80" height="9" rx="8"></rect>
+                    <rect class="svg" y="23" width="80" height="9" rx="8"></rect>
+                    <rect class="svg" y="45" width="80" height="9" rx="8"></rect>
+                </svg>
+            </div>
+            <nav id="nav-bar" onmouseleave="RmvNav(this)" role="navigation">
                 <div id="menu">
                     <ul id="Deep0-ul">
                         <li class="Deep0-li"><a href="https://github.com/AbubakarShf" id="Home">Home</a></li>
@@ -94,7 +96,7 @@
                                     </ul>
                                 </li>
                                 <li class="Deep1-li"><a href="https://github.com/AbubakarShf">Computer Science & IT</a>
-                                    <ul class="Deep2-ul">
+                                    <ul class="Deep2-ul" id="Deep2-ul">
                                         <li class="Deep2-li"><a href=" https://github.com/AbubakarShf">Computer
                                                 Science</a> </li>
                                         <li class="Deep2-li"><a href="https://github.com/AbubakarShf">Information
@@ -130,7 +132,7 @@
                         <li class="Deep0-li"> <a href="https://github.com/AbubakarShf">
                                 Admissions
                             </a>
-                            <ul class="Deep1-ul">
+                            <ul class="Deep1-ul admission">
                                 <li class="Deep1-li"><a href="https://github.com/AbubakarShf">Admission Office</a></li>
                                 <li class="Deep1-li"><a href="https://github.com/AbubakarShf">Undergraduate</a></li>
                                 <li class="Deep1-li"><a href="https://github.com/AbubakarShf">Graduate</a></li>
@@ -182,5 +184,18 @@
     </div>
 </body>
 <script src="./script/script.js"></script>
+<script>
+
+    const NavFunc = () => {
+        document.getElementById("nav-bar").style.display = "initial";
+
+    }
+    const RmvNav = (ele) => {
+        if (window.innerWidth <= 799) {
+            ele.style.display = 'none';
+
+        }
+    }
+</script>
 
 </html>

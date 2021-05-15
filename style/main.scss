@@ -8,7 +8,11 @@ body {
     overflow-x: hidden;
 }
 a {
+    text-decoration: none;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     color: white;
+    font-weight: 600;
+    font-size: 1rem;
 }
 .container {
     .top-bar {
@@ -60,8 +64,15 @@ main {
             fill: white;
         }
     }
-    nav {
+    #nav-bar {
         ul {
+            background-color: crimson;
+            border: 1px solid black;
+            border-radius: 10px;
+            list-style: none;
+            display: inline-block;
+        }
+        #Deep0-ul .Deep1-ul {
             display: none;
         }
     }
@@ -99,6 +110,7 @@ main {
         #hamburger {
             display: none;
         }
+
         nav {
             width: 90vh;
             #menu {
@@ -109,15 +121,23 @@ main {
                 flex-wrap: wrap;
                 width: 100vw;
                 padding: 1rem;
-                ul {
-                    a {
-                        font-family: Arial, Helvetica, sans-serif;
-                        font-size: 18px;
-                        color: #fff;
-                        font-weight: 500;
-                        text-decoration: none;
+                #Deep0-ul {
+                    .Deep0-li:hover {
+                        .Deep1-ul {
+                            display: initial;
+                            .Deep1-li {
+                                &:hover {
+                                    .Deep2-ul {
+                                        display: initial;
+                                    }
+                                }
+                                .Deep2-ul {
+                                    display: none;
+                                }
+                            }
+                        }
                     }
-                    display: initial;
+                    // display: initial;
                     border-radius: 10px;
                     list-style: none;
                     position: relative;
@@ -133,8 +153,8 @@ main {
                         margin: 0;
                         padding: 0;
                     }
-                    li:hover > ul {
-                        display: block;
+                    #Deep0-li:hover > ul {
+                        display: initial;
                     }
                     .Deep0-li:hover {
                         border-bottom: 1px solid white;
@@ -147,18 +167,19 @@ main {
                     }
                     ul {
                         border-radius: 7px;
-                        display: none;
+                        // display: initial;
                         position: absolute;
-                        background-color: #b10d0d;
+                        background-color: #970008;
                         top: 100%;
                         left: 0;
+
                         li {
                             float: none;
                             width: 200px;
                         }
                         li:hover {
                             border-radius: 4px;
-                            border: 1px solid white;
+                            // border: 1px solid white;
                         }
                         ul {
                             top: 0;

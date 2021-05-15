@@ -11,7 +11,11 @@ body {
 }
 
 a {
+  text-decoration: none;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: white;
+  font-weight: 600;
+  font-size: 1rem;
 }
 
 .container .top-bar {
@@ -82,7 +86,15 @@ main #hamburgerMenu .svg {
   fill: white;
 }
 
-main nav ul {
+main #nav-bar ul {
+  background-color: crimson;
+  border: 1px solid black;
+  border-radius: 10px;
+  list-style: none;
+  display: inline-block;
+}
+
+main #nav-bar #Deep0-ul .Deep1-ul {
   display: none;
 }
 
@@ -137,60 +149,59 @@ main nav ul {
     width: 100vw;
     padding: 1rem;
   }
-  .container main nav #menu ul {
-    display: initial;
+  .container main nav #menu #Deep0-ul {
     border-radius: 10px;
     list-style: none;
     position: relative;
     padding: 1rem;
     float: left;
   }
-  .container main nav #menu ul a {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 18px;
-    color: #fff;
-    font-weight: 500;
-    text-decoration: none;
+  .container main nav #menu #Deep0-ul .Deep0-li:hover .Deep1-ul {
+    display: initial;
   }
-  .container main nav #menu ul a {
+  .container main nav #menu #Deep0-ul .Deep0-li:hover .Deep1-ul .Deep1-li:hover .Deep2-ul {
+    display: initial;
+  }
+  .container main nav #menu #Deep0-ul .Deep0-li:hover .Deep1-ul .Deep1-li .Deep2-ul {
+    display: none;
+  }
+  .container main nav #menu #Deep0-ul a {
     padding: 0px 10px;
     display: block;
   }
-  .container main nav #menu ul li {
+  .container main nav #menu #Deep0-ul li {
     float: left;
     position: relative;
     margin: 0;
     padding: 0;
   }
-  .container main nav #menu ul li:hover > ul {
-    display: block;
+  .container main nav #menu #Deep0-ul #Deep0-li:hover > ul {
+    display: initial;
   }
-  .container main nav #menu ul .Deep0-li:hover {
+  .container main nav #menu #Deep0-ul .Deep0-li:hover {
     border-bottom: 1px solid white;
   }
-  .container main nav #menu ul ul li:hover {
+  .container main nav #menu #Deep0-ul ul li:hover {
     background-color: #d4033b;
   }
-  .container main nav #menu ul ul > li {
+  .container main nav #menu #Deep0-ul ul > li {
     margin: 5px 0px;
   }
-  .container main nav #menu ul ul {
+  .container main nav #menu #Deep0-ul ul {
     border-radius: 7px;
-    display: none;
     position: absolute;
-    background-color: #b10d0d;
+    background-color: #970008;
     top: 100%;
     left: 0;
   }
-  .container main nav #menu ul ul li {
+  .container main nav #menu #Deep0-ul ul li {
     float: none;
     width: 200px;
   }
-  .container main nav #menu ul ul li:hover {
+  .container main nav #menu #Deep0-ul ul li:hover {
     border-radius: 4px;
-    border: 1px solid white;
   }
-  .container main nav #menu ul ul ul {
+  .container main nav #menu #Deep0-ul ul ul {
     top: 0;
     left: 100%;
   }

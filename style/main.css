@@ -165,7 +165,7 @@ main nav ul {
   .container main nav #menu ul li:hover > ul {
     display: block;
   }
-  .container main nav #menu ul .li-main:hover {
+  .container main nav #menu ul .Deep0-li:hover {
     border-bottom: 1px solid white;
   }
   .container main nav #menu ul ul li:hover {
@@ -208,7 +208,7 @@ main nav ul {
   .container main nav {
     margin-left: 3rem;
   }
-  .container main nav #menu ul .li-main a {
+  .container main nav #menu ul .Deep0-li a {
     padding: 0px 5px;
     font-size: 15px;
   }

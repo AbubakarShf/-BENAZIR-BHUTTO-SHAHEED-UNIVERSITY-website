@@ -69,7 +69,7 @@ main {
         display: none;
         ul {
             padding: 0.8rem 0px;
-            background-color: #970008;
+            background-color: #83012a;
             border: 1px solid black;
             border-radius: 10px;
             list-style: none;
@@ -188,7 +188,7 @@ main {
             // position: absolute;
             position: relative;
 
-            width: 90vh;
+            width: 100vw;
             #menu {
                 position: relative;
                 top: -7rem;
@@ -197,6 +197,10 @@ main {
                 flex-wrap: wrap;
                 width: 100vw;
                 #Deep0-ul {
+                    display: flex;
+                    justify-content: space-around;
+                    margin-top: 1rem;
+                    width: 70%;
                     a {
                         font-weight: 600;
                         font-size: 1rem;
@@ -263,7 +267,7 @@ main {
                         border-radius: 7px;
                         // display: initial;
                         position: absolute;
-                        background-color: #970008;
+                        background-color: #83012a;
                         top: 100%;
                         left: 0;
 
@@ -283,13 +287,13 @@ main {
                 }
             }
             #menu > ul {
-                background-color: #970008;
+                background-color: #83012a;
                 z-index: 100;
             }
         }
     }
 }
-@media only screen and (max-width: 1527px) and (min-width: 970px) {
+@media only screen and (max-width: 1527px) and (min-width: 1345px) {
     .container {
         header {
             .split {
@@ -307,40 +311,9 @@ main {
                 margin-left: 3rem;
                 #menu {
                     ul {
-                        .Deep0-li {
-                            a {
-                                padding: 0px 5px;
-                                font-size: 15px;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-@media only screen and (max-width: 973px) and (min-width: 800px) {
-    .container {
-        header {
-            .split {
-                .uni-name {
-                    h1 {
-                        margin-left: 1rem;
-                        font-size: 1.2rem;
-                    }
-                }
-            }
-        }
-        main {
-            nav {
-                margin-left: 2rem;
-                display: initial;
-
-                #menu {
-                    ul {
                         li {
-                            a {
-                                padding: 0px 4px;
+                            > a {
+                                padding: 0px 5px;
                                 font-size: 13px;
                             }
                         }
@@ -350,23 +323,88 @@ main {
         }
     }
 }
-@media only screen and (max-width: 947px) and (min-width: 800px) {
-    #nav-bar {
-        #menu {
-            #Deep0-ul {
-                width: 82vw;
-                flex-wrap: nowrap;
-                padding: 0.8rem !important;
-                li {
-                    a {
-                        font-weight: 400;
-                        font-size: 10px !important;
+@media only screen and (max-width: 1344px) and (min-width: 1315px) {
+    .container {
+        header {
+            .split {
+                .uni-name {
+                    h1 {
+                        margin-left: 2rem;
+                        font-size: 24px;
                     }
                 }
             }
         }
     }
+    #nav-bar {
+        #menu {
+            #Deep0-ul {
+                width: 50vw;
+                padding: auto;
+                > a {
+                    font-size: 15px !important;
+                }
+            }
+        }
+    }
 }
+@media only screen and (max-width: 1314px) and (min-width: 1152px) {
+    .container header .split .uni-name {
+        h1 {
+            margin-left: 3rem;
+            font-size: 22px;
+        }
+    }
+    .container main #nav-bar #menu #Deep0-ul a {
+        font-size: 13px;
+    }
+}
+@media only screen and (max-width: 1152px) and (min-width: 917px) {
+    .container header .split .uni-name {
+        h1 {
+            margin-left: 3rem;
+            font-size: 20px;
+        }
+    }
+    .container main #nav-bar #menu #Deep0-ul a {
+        font-size: 10px;
+        font-weight: 600;
+    }
+    .container main #nav-bar #menu #Deep0-ul {
+        padding-left: 1px;
+        padding-right: 1px;
+    }
+}
+@media only screen and (max-width: 916px) and (min-width: 800px) {
+    .container header .split .logo img {
+        width: 100px;
+        height: 100px;
+    }
+    .container header .split .uni-name h1 {
+        margin-left: 3rem;
+        font-size: 17px;
+        font-weight: 600;
+    }
+    .container main #nav-bar #menu {
+        flex-wrap: nowrap;
+        width: 105vw;
+    }
+    .container main #nav-bar #menu #Deep0-ul li {
+        margin: 0px;
+    }
+    .container main #nav-bar #menu #Deep0-ul {
+        padding: 15px;
+    }
+    .container main #nav-bar #menu #Deep0-ul a {
+        font-weight: 600;
+        font-size: 10px;
+    }
+    .container main #nav-bar #menu #Deep0-ul {
+        margin-top: 1rem;
+        width: 79%;
+    }
+}
+
 @keyframes FadeIn {
     from {
         opacity: 0;

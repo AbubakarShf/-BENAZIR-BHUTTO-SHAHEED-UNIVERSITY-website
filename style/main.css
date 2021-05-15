@@ -47,7 +47,6 @@ a {
           justify-content: center;
   padding: 0.8rem;
   margin: 0 auto;
-  width: 70vh;
 }
 
 .container header .split .logo {
@@ -89,6 +88,7 @@ main #nav-bar {
   margin-left: 2rem;
   position: absolute;
   display: none;
+  z-index: 999;
 }
 
 main #nav-bar ul {
@@ -160,7 +160,78 @@ main #nav-bar #Deep0-ul .Deep0-li:hover .Deep1-ul ul {
   display: none;
 }
 
+#container {
+  margin-top: -7rem;
+  width: 100vw;
+  height: 50vh;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#container .image-container {
+  margin-top: 3rem;
+  width: 70%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  background-image: url(../images-slides/1.gif);
+  background-size: 100% 100%;
+  animation: slider 10s infinite reverse linear;
+}
+
+@-webkit-keyframes slider {
+  0% {
+    background-image: url(../images-slides/2.gif);
+  }
+  20% {
+    background-image: url(../images-slides/3.gif);
+  }
+  40% {
+    background-image: url(../images-slides/4.jpeg);
+  }
+  60% {
+    background-image: url(../images-slides/5.jpg);
+  }
+  80% {
+    background-image: url(../images-slides/6.gif);
+  }
+  100% {
+    background-image: url(../images-slides/1.gif);
+  }
+}
+
+@keyframes slider {
+  0% {
+    background-image: url(../images-slides/2.gif);
+  }
+  20% {
+    background-image: url(../images-slides/3.gif);
+  }
+  40% {
+    background-image: url(../images-slides/4.jpeg);
+  }
+  60% {
+    background-image: url(../images-slides/5.jpg);
+  }
+  80% {
+    background-image: url(../images-slides/6.gif);
+  }
+  100% {
+    background-image: url(../images-slides/1.gif);
+  }
+}
+
 @media only screen and (min-width: 800px) {
+  #container .image-container {
+    margin-top: 0rem;
+  }
   .container header .split {
     background-image: url(../img/header-shadow.png);
     z-index: 3;
@@ -190,6 +261,9 @@ main #nav-bar #Deep0-ul .Deep0-li:hover .Deep1-ul ul {
     padding-left: 0px;
     font-size: 2em;
     font-weight: 700;
+  }
+  main #nav-bar ul {
+    border-radius: 0px;
   }
   .container main #hamburger {
     display: none;
@@ -240,7 +314,6 @@ main #nav-bar #Deep0-ul .Deep0-li:hover .Deep1-ul ul {
             align-items: center;
   }
   .container main #nav-bar #menu #Deep0-ul {
-    border-radius: 10px;
     list-style: none;
     position: relative;
     padding: 1rem;
@@ -358,6 +431,10 @@ main #nav-bar #Deep0-ul .Deep0-li:hover .Deep1-ul ul {
 }
 
 @media only screen and (max-width: 916px) and (min-width: 800px) {
+  #container .image-container {
+    width: 73.4%;
+    margin-left: 15px;
+  }
   .container header .split .logo img {
     width: 100px;
     height: 100px;
@@ -384,7 +461,8 @@ main #nav-bar #Deep0-ul .Deep0-li:hover .Deep1-ul ul {
   }
   .container main #nav-bar #menu #Deep0-ul {
     margin-top: 1rem;
-    width: 79%;
+    margin-left: -2rem;
+    width: 70%;
   }
 }
 

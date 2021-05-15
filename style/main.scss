@@ -31,7 +31,7 @@ a {
             justify-content: center;
             padding: 0.8rem;
             margin: 0 auto;
-            width: 70vh;
+            // width: 70vh;
             .logo {
                 display: flex;
                 justify-content: center;
@@ -67,6 +67,8 @@ main {
         margin-left: 2rem;
         position: absolute;
         display: none;
+        z-index: 999;
+
         ul {
             padding: 0.8rem 0px;
             background-color: #83012a;
@@ -148,7 +150,49 @@ main {
         }
     }
 }
+#container {
+    margin-top: -7rem;
+    width: 100vw;
+    height: 50vh;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+}
+#container .image-container {
+    margin-top: 3rem;
+    width: 70%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    background-image: url(../images-slides/1.gif);
+    background-size: 100% 100%;
+    animation: slider 10s infinite reverse linear;
+}
+@keyframes slider {
+    0% {
+        background-image: url(../images-slides/2.gif);
+    }
+    20% {
+        background-image: url(../images-slides/3.gif);
+    }
+    40% {
+        background-image: url(../images-slides/4.jpeg);
+    }
+    60% {
+        background-image: url(../images-slides/5.jpg);
+    }
+    80% {
+        background-image: url(../images-slides/6.gif);
+    }
+    100% {
+        background-image: url(../images-slides/1.gif);
+    }
+}
 @media only screen and (min-width: 800px) {
+    #container .image-container {
+        margin-top: 0rem;
+    }
     .container header {
         .split {
             background-image: url(../img/header-shadow.png);
@@ -176,7 +220,9 @@ main {
             }
         }
     }
-
+    main #nav-bar ul {
+        border-radius: 0px;
+    }
     .container main {
         #hamburger {
             display: none;
@@ -236,7 +282,7 @@ main {
                         }
                     }
                     // display: initial;
-                    border-radius: 10px;
+                    // border-radius: 10px;
                     list-style: none;
                     position: relative;
                     padding: 1rem;
@@ -376,6 +422,10 @@ main {
     }
 }
 @media only screen and (max-width: 916px) and (min-width: 800px) {
+    #container .image-container {
+        width: 73.4%;
+        margin-left: 15px;
+    }
     .container header .split .logo img {
         width: 100px;
         height: 100px;
@@ -401,7 +451,8 @@ main {
     }
     .container main #nav-bar #menu #Deep0-ul {
         margin-top: 1rem;
-        width: 79%;
+        margin-left: -2rem;
+        width: 70%;
     }
 }
 

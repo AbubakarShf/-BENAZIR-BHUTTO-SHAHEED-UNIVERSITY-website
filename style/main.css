@@ -160,33 +160,9 @@ main #nav-bar #Deep0-ul .Deep0-li:hover .Deep1-ul ul {
   display: none;
 }
 
-#container {
-  margin-top: -5rem;
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-#container {
-  height: 100vh;
-}
-
-#container .main-content {
-  height: 100vh;
-  background-color: white;
-  width: 70%;
-  margin-bottom: 20%;
-}
-
-#container .main-content .image-container {
+#container-main .main-content .image-container {
   max-width: 100%;
-  height: 50%;
+  height: 41vh;
   max-height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
@@ -239,46 +215,48 @@ main #nav-bar #Deep0-ul .Deep0-li:hover .Deep1-ul ul {
   }
 }
 
-#container .main-content .split {
-  padding-top: 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+#container-main {
+  margin-top: -5rem;
+  width: 100%;
+  background-color: blue;
 }
 
-#container .main-content .split .welcome h1 {
-  text-align: center;
-  height: auto;
-}
-
-#container .main-content .split .teacher {
+#container-main .main-content {
+  margin-bottom: 20%;
+  margin: 0 auto;
+  background-color: white;
+  width: 70%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 10px;
-  height: 100vh;
+  font-size: 2.2ch;
 }
 
-#container .main-content .split .teacher p {
+#container-main .main-content .split {
+  padding: 1rem;
+}
+
+#container-main .main-content .split p {
+  line-height: 1.4rem;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 2.5ch;
+  font-weight: 500;
 }
 
 @media only screen and (min-width: 800px) {
-  #container {
+  #container-main {
     margin-top: -7rem;
+  }
+  #container-main .main-content {
+    margin: 0 auto;
+    width: 70.7%;
   }
   .container header .split {
     background-image: url(../img/header-shadow.png);
     z-index: 3;
     margin-top: -10px;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -328,6 +306,7 @@ main #nav-bar #Deep0-ul .Deep0-li:hover .Deep1-ul ul {
     width: 100vw;
   }
   .container main #nav-bar #menu #Deep0-ul {
+    margin-left: -1rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -356,7 +335,7 @@ main #nav-bar #Deep0-ul .Deep0-li:hover .Deep1-ul ul {
   .container main #nav-bar #menu #Deep0-ul {
     list-style: none;
     position: relative;
-    padding: 1rem;
+    padding: 11px;
     float: left;
   }
   .container main #nav-bar #menu #Deep0-ul .Deep0-li:hover .Deep1-ul {
@@ -417,6 +396,9 @@ main #nav-bar #Deep0-ul .Deep0-li:hover .Deep1-ul ul {
 }
 
 @media only screen and (max-width: 1527px) and (min-width: 1345px) {
+  * {
+    color: gold !important;
+  }
   .container header .split .uni-name h1 {
     margin-left: 2rem;
     font-size: 1.6rem;
@@ -431,13 +413,20 @@ main #nav-bar #Deep0-ul .Deep0-li:hover .Deep1-ul ul {
   }
 }
 
+@media only screen and (max-width: 1356px) and (min-width: 1315px) {
+  .container main #nav-bar #menu #Deep0-ul a {
+    font-weight: 600;
+    font-size: 13px;
+  }
+}
+
 @media only screen and (max-width: 1344px) and (min-width: 1315px) {
   .container header .split .uni-name h1 {
     margin-left: 2rem;
     font-size: 24px;
   }
   #nav-bar #menu #Deep0-ul {
-    width: 50vw;
+    width: 60vw;
     padding: auto;
   }
   #nav-bar #menu #Deep0-ul > a {
@@ -445,17 +434,17 @@ main #nav-bar #Deep0-ul .Deep0-li:hover .Deep1-ul ul {
   }
 }
 
-@media only screen and (max-width: 1314px) and (min-width: 1152px) {
+@media only screen and (max-width: 1316px) and (min-width: 1152px) {
   .container header .split .uni-name h1 {
     margin-left: 3rem;
     font-size: 22px;
   }
   .container main #nav-bar #menu #Deep0-ul a {
-    font-size: 13px;
+    font-size: 12px;
   }
 }
 
-@media only screen and (max-width: 1152px) and (min-width: 917px) {
+@media only screen and (max-width: 1153px) and (min-width: 917px) {
   .container header .split .uni-name h1 {
     margin-left: 3rem;
     font-size: 20px;
@@ -464,21 +453,16 @@ main #nav-bar #Deep0-ul .Deep0-li:hover .Deep1-ul ul {
     font-size: 10px;
     font-weight: 600;
   }
-  .container main #nav-bar #menu #Deep0-ul {
-    padding-left: 1px;
-    padding-right: 1px;
+  .container main #nav-bar #menu #Deep0-ul .Deep0-li > a {
+    margin-left: -2px;
   }
 }
 
 @media only screen and (max-width: 916px) and (min-width: 800px) {
-  #container .image-container {
-    width: 100%;
-  }
-  #container .main-content {
+  #container-main .main-content {
     background-color: white;
-    width: 73.3%;
+    width: 73.5%;
     height: 100vh;
-    margin-left: 7px;
   }
   .container header .split .logo img {
     width: 100px;
@@ -492,7 +476,11 @@ main #nav-bar #Deep0-ul .Deep0-li:hover .Deep1-ul ul {
   .container main #nav-bar #menu {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
-    width: 105vw;
+    width: 108.5vw;
+  }
+  .container main #nav-bar #menu #Deep0-ul {
+    width: 67.8%;
+    margin-left: -4.6rem;
   }
   .container main #nav-bar #menu #Deep0-ul li {
     margin: 0px;
@@ -507,7 +495,6 @@ main #nav-bar #Deep0-ul .Deep0-li:hover .Deep1-ul ul {
   }
   .container main #nav-bar #menu #Deep0-ul {
     margin-top: 1rem;
-    margin-left: -2rem;
   }
 }
 

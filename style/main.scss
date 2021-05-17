@@ -187,7 +187,6 @@ main {
 #container-main {
     margin-top: -5rem;
     width: 100%;
-    background-color: blue;
     .main-content {
         margin-bottom: 20%;
         margin: 0 auto;
@@ -211,9 +210,10 @@ main {
 @media only screen and (min-width: 800px) {
     #container-main {
         margin-top: -7rem;
+
         .main-content {
             margin: 0 auto;
-            width: 70.7%;
+            width: 70vw;
         }
     }
     .container header {
@@ -361,9 +361,14 @@ main {
         }
     }
 }
+@media only screen and (max-width: 2560px) and (min-width: 1528px) {
+    .container main #nav-bar #menu #Deep0-ul {
+        margin-left: 0rem;
+    }
+}
 @media only screen and (max-width: 1527px) and (min-width: 1345px) {
-    * {
-        color: gold !important;
+    .container main #nav-bar #menu #Deep0-ul {
+        margin-left: 0.3rem;
     }
     .container {
         header {
@@ -436,8 +441,14 @@ main {
     .container main #nav-bar #menu #Deep0-ul a {
         font-size: 12px;
     }
+    .container main #nav-bar #menu #Deep0-ul {
+        margin-left: 0rem;
+    }
 }
 @media only screen and (max-width: 1153px) and (min-width: 917px) {
+    .container main #nav-bar #menu #Deep0-ul {
+        margin-left: 0.2rem;
+    }
     .container header .split .uni-name {
         h1 {
             margin-left: 3rem;
@@ -477,15 +488,11 @@ main {
         width: 108.5vw;
     }
     .container main #nav-bar #menu #Deep0-ul {
-        width: 67.8%;
-        margin-left: -4.6rem;
-    }
-    .container main #nav-bar #menu #Deep0-ul li {
+        width: 68.8%;
         margin: 0px;
+        padding: 10px 21px;
     }
-    .container main #nav-bar #menu #Deep0-ul {
-        padding: 15px;
-    }
+
     .container main #nav-bar #menu #Deep0-ul a {
         font-weight: 600;
         font-size: 10px;
@@ -493,6 +500,7 @@ main {
     }
     .container main #nav-bar #menu #Deep0-ul {
         margin-top: 1rem;
+        margin-left: -3.5rem;
     }
 }
 
